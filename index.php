@@ -1,22 +1,27 @@
 <?php
 require 'class/session/Session.php';
 
+//5.Dans votre index.php créer un nouvel objet Session
 $session = new Session();
 
-$session-> weight = '10lbs';
-
-$session-> cars = 'mazda';
-
-var_dump($session->setAttribute());
+$session->name = 'ezra';
+$session->address = 'Andrezieux Bt';
 
 
-var_dump($session->weight);
+var_dump($session->add('lastname', 'John'));
 
-var_dump($session->cars);
+var_dump(isset($session->name));
 
-var_dump(isset($session->cars));
+//6.Utilisez la méthode magique get pour retrouver la valeur de votre attribut
+var_dump($session->address);
 
-unset($session->cars);
+var_dump($session->attribute);
 
 
+//7.Si le nouvel attribut n’existe pas, créez le (utilisation de la méthode magique SET
 
+var_dump($session->ville);
+$session->ville = 'Saint Etienne';
+var_dump($session->ville);
+
+//unset($session->);
