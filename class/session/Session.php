@@ -25,10 +25,11 @@ class Session extends Exception
 
 //4.Dans la classe Session utilisez la fonction __set qui appel la fonction add() créer
 //précédemment pour ajouter un attribut dans notre tableau d’attribut
-    public function __set($name, $value)
+    public function __set($key, $value)
     {
-        $this->attribute[$name] = $value;
+//        $this->attribute[$name] = $value;
 
+          $this->add($key, $value);
     }
 
     public function __get($name)

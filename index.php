@@ -1,5 +1,5 @@
 <?php
-require 'class/session/Session.php';
+require 'include.php';
 
 //5.Dans votre index.php créer un nouvel objet Session
 $session = new Session();
